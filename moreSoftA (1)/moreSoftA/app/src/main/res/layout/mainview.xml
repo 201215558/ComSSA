@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="1">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="140px"
+        android:background="#ed664c"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="25px"
+            android:layout_weight="1"
+            android:gravity="center_vertical|left"
+            android:text="Com SSa"
+            android:textColor="#ffffff"
+            android:textSize="55px"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/main_button"
+            android:layout_width="195px"
+            android:layout_height="90px"
+            android:layout_marginRight="25px"
+            android:gravity="center"
+            android:text="Write"
+            android:textColor="#ffffff"
+            android:textSize="45px" />
+
+    </LinearLayout>
+    <ListView
+        android:id="@+id/main_list_view"
+        android:layout_width="match_parent"
+        android:layout_height="417dp"
+        android:background="#e3e3e3"
+        android:paddingTop="17px"
+        android:paddingBottom="17px"
+        android:layout_weight="0.69">
+    </ListView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:background="#e3e3e3"
+        android:layout_weight="0.43">
+
+
+        <ImageView
+
+            android:id="@+id/NoticePart"
+            android:layout_height="35dp"
+            android:background="@drawable/notice"
+            android:layout_marginRight="80dp"
+            android:layout_width="35dp"
+            android:onClick="noticeClicked"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="64dp" />
+
+        <ImageView
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            app:srcCompat="@drawable/check"
+            android:id="@+id/check"
+            android:onClick="checkClicked"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="37dp" />
+
+        <ImageView
+
+            android:id="@+id/CommunityPart"
+            android:background="@drawable/community"
+            android:layout_marginRight="80dp"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:onClick="communityClicked"
+            android:layout_alignParentTop="true"
+            android:layout_toStartOf="@+id/check"
+            android:layout_marginEnd="38dp" />
+
+        <ImageView
+            android:orientation="horizontal"
+            android:id="@+id/CalendarPart"
+            android:background="@drawable/calendar"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:onClick="calendarClicked"
+            android:layout_marginStart="47dp"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@+id/NoticePart" />
+
+    </RelativeLayout>
+
+</LinearLayout>
